@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="login container">
+      
+    <div class="login-container secondary-color">
+        <div class="login-title">
+            <h1>Sign Up</h1>
+        </div>
 
+
+        <form action="">
+            <input class ="form-control" type="text" name="email" type="email" placeholder="Email">
+            <input class ="form-control" type="text" name="username" type="usename" placeholder="Username">
+
+            <div class="space-after"></div>
+
+            <input class ="form-control" type="password" name="password" type="password" placeholder="Password">
+            <input class ="form-control" type="confirm-password" name="confirm-password" type="confirm-password" placeholder="Confirm Password">
+
+            <br>
+            <button class="login-button">Sign Up</button>
+
+            <div class="help">
+                <p>Already have an account?</p>
+                <a href="" class="light-green help-text">Log in</a>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}
