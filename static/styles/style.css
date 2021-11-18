@@ -1,12 +1,142 @@
-body{
-    background: #181c28;
-    color: white;
+body {
+  background: #181c28;
+  color: white;
+  font-family: sans-serif;
 }
 
-.secondary-color{
-    background: #181c28;
+.secondary-color {
+  background: #252839;
 }
 
-.light-green{
-    background: #181c28;
+.light-green {
+  color: #4ffaca;
+}
+
+.container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 32px 0;
+  min-height: cal(100vh - 60px);
+}
+
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #4ffaca;
+  padding: 45px 45px 30px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-control {
+  color: white;
+  display: block;
+  width: 100%;
+  max-height: 45px;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 2px solid rgb(134, 133, 133);
+  outline: none;
+  line-height: 1;
+  border-radius: 0;
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  text-align: left;
+  color: rgb(134, 133, 133);
+  padding-bottom: 20px;
+}
+.login-title {
+  margin-bottom: 75px;
+}
+.login-button {
+  display: block;
+  background-color: #4ffaca;
+  color: #090a0e;
+  padding: 15px 25px;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.05rem;
+  white-space: nowrap;
+  max-width: 100%;
+  position: relative;
+  width: 400px;
+}
+
+.help {
+  box-sizing: border-box;
+  isolation: isolate;
+  margin: 14px 0;
+}
+
+.help-text {
+  font-weight: 600;
+}
+
+nav .container {
+  height: 100%;
+  width: 100%;
+  padding: 0 120px;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.inner-nav {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.login-signup-buttons {
+  margin-left: auto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.btn {
+  display: block;
+  border: 2px solid transparent;
+  padding: 15px 20px;
+  font-weight: 700;
+  max-width: 100%;
+  position: relative;
+  background-color: #4ffaca;
+}
+
+nav .login-signup-buttons .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.btn-transparent {
+  color: #4ffaca;
+  background-color: transparent;
+}
+
+.nav-colapse {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
