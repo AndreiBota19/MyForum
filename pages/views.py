@@ -3,10 +3,11 @@ from django.http import HttpResponse, request
 
 # Create your views here.
 
+
 def login_view(request, *args, **kwargs):
     return render(request, "login.html", {})
 
-    
+
 def signup_view(request, *args, **kwargs):
     return render(request, "signup.html", {})
 
