@@ -4,7 +4,7 @@ from users.forms import CreateUserForm, ProfileUpdateForm, UserUpdateForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from posts.models import Post
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 
 def signup_view(request, *args, **kwargs):
@@ -55,3 +55,12 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
     template_name = 'posts.html'
+
+class PostCreateView(CreateView):
+    model = Post
+    template_name = 'create.html'
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)

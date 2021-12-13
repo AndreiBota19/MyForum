@@ -10,11 +10,11 @@
             <article class="media content-section content-section-shadow">
                 <div class="media-body">
                     <div class="post-metadata">
-                        <a href="">{{ post.author }}</a>
-                        <small class="text-muted"> {{ post.date_posted|date:"N d, Y"}}</small>
+                        <a href="">{{ object.author }}</a>
+                        <small class="text-muted"> {{ object.date_posted|date:"N d, Y"}}</small>
                     </div>
-                    <h2 class="post-title">{{ post.title }}</h2>
-                    <p class="post-content"> {{ post.content }}</p>
+                    <h2 class="post-title">{{ object.title }}</h2>
+                    <p class="post-content"> {{ object.content }}</p>
                 </div>
             </article>        
     </div>
