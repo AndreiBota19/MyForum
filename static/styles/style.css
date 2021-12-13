@@ -1,7 +1,10 @@
+/* ----------------------- Main ----------------------- */
+
 body {
   background: #181c28;
   color: white;
   font-family: sans-serif;
+  margin-top: 5rem;
 }
 
 .secondary-color {
@@ -18,6 +21,64 @@ body {
   width: 40%;
   margin: 0 auto;
 }
+
+ul {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* ----------------------- Posts ----------------------- */
+
+.container-post {
+  width: 60%;
+  padding: 25px 0;
+  margin: 0 auto;
+}
+
+.content-section {
+  background: #252839;
+  padding: 10px 20px;
+  border: 1.5px solid #0c0a0a;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.content-section-shadow {
+  box-shadow: 1px 1px 2px 2px #131010;
+}
+
+.post-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #ececec;
+}
+
+.post-title {
+  color: #fff;
+}
+
+a.post-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.post-metadata a:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.post-content {
+  white-space: pre-line;
+}
+
+/* ----------------------- Login/Register ----------------------- */
 
 .login-container {
   max-width: 400px;
@@ -93,4 +154,11 @@ nav .container {
 
 .space-after {
   padding-bottom: 30px;
+}
+
+.messages {
+  background-color: grey;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
 }

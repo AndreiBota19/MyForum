@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
 
 {% block content %}
+
     <div class="login container">
       
         <div class="login-container secondary-color">
@@ -9,23 +13,27 @@
             </div>
     
 
-            <!-- <form action="">
-                <input class ="form-control" type="text" name="email" type="email" placeholder="Email">
-                <input class ="form-control" type="password" name="password" type="password" placeholder="Password">
+             <form method="POST" action="">
+                {% csrf_token %}
+                <input class ="form-control" type="text" name="username" placeholder="Username">
+                <input class ="form-control" type="password" name="password" placeholder="Password">
 
-                <div class="remember-me">
-                    <input type="checkbox">Remember me
+                <div class="remember-me space-after">
+                    <a href="">Forgot Password?</a>
                 </div>
-
+                
                 <button type="submit" name="Create User" class="login-button">Log In</button>
 
-                <div class="help">
-                    <p>Don't have an account yet?</p>
-                    <a href="{% url 'signup' %}" class="light-green help-text">Sign up</a>
-                </div>
-            </form> -->
+              
+            </form> 
+            <!-- {% for message in messages %}
+                <p id="messages">{{message}}</p>
+            {% endfor %} -->
 
-           
+            <div class="help">
+                <p>Don't have an account yet?</p>
+                <a href="{% url 'signup' %}" class="light-green help-text">Sign up</a>
+            </div>
         </div>
     </div>
     

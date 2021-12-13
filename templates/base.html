@@ -3,19 +3,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta name="viewport"  charset="utf-8" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
     <link rel="icon" href="{% static 'images/logo.png' %}">
+
+
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>MyForum</title>
+    {% endif %}
     
 </head>
 <body>
+    <nav class="nav-container"></nav>
 
-    <nav class="container"></nav>
-
-    {% block content %}
-        
-    {% endblock %}
+    {% block content %} {% endblock %}
     
 </body>
 </html>

@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+
 
 {% block content %}
-<h1 class="secondary-color">asdasddasasdasddas</h1>
+    <div class="container-post">
+        {% for post in posts %}
+            <article class="media content-section content-section-shadow">
+                <div class="media-body">
+                    <div class="post-metadata">
+                        <a href="" class="mr-2">{{ post.author }}</a>
+                        <small class="text-muted"> {{ post.date_posted }}</small>
+                    </div>
+                    <h2><a href="" class="post-title">{{ post.title }}</a></h2>
+                    <p class="post-content"> {{ post.content }}</p>
+                </div>
+            </article>        
+        {% endfor %}
+    </div>
+  
 {% endblock %}
