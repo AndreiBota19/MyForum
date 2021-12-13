@@ -24,16 +24,19 @@
         </div>
         <ul class="nav-link">
             <li>
-                <a href="">Home</a>
+                <a href="{% url 'home' %}">Home</a>
             </li>
             <li>
-                <a href="">Login</a>
+                <a href="{% url 'login' %}">Login</a>
             </li>
             <li>
-                <a href="">Register</a>
+                <a href="{% url 'signup' %}">Register</a>
             </li>
             <li>
-                <a href="">Profile</a>
+                <a href="{% url 'signup' %}">Profile</a>
+            </li>
+            <li>
+                <a href="{% url 'signup' %}">Logout</a>
             </li>
         </ul>
         <div class="resize">
