@@ -1,28 +1,10 @@
+from django.contrib.admin import decorators
 from django.shortcuts import render, redirect
 from users.forms import CreateUserForm
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from posts.models import Post
-
-
-# Create your views here.
-
-def login_view(request, *args, **kwargs):
-
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            login(request, user)
-            return redirect('home')
-        else:
-            messages.info(request, 'Your Username and Password are Incorrect!')
-
-    context = {}
-    return render(request, "login.html", context)
+from django.views.generic import ListView, DetailView
 
 
 def signup_view(request, *args, **kwargs):
@@ -34,17 +16,32 @@ def signup_view(request, *args, **kwargs):
             form.save()
             messages.success(request, f'Your Account Has Been Created! ')
             return redirect('login')
-        
+
     context = {'form': form}
     return render(request, "signup.html", context)
 
 
-def logout_view(request, *args, **kwargs):
-    return redirect('login')
+# def home_view(request, *args, **kwargs):
+#     context = {
+#         'posts': Post.objects.all(),
+#     }
+#     return render(request, "home.html", context)
 
 
-def home_view(request, *args, **kwargs):
+@login_required
+def profile_view(request, *args, **kwargs):
     context = {
-        'posts': Post.objects.all(),
+        'title': 'My Profile',
     }
-    return render(request, "home.html", context)
+    return render(request, "profile.html", context)
+
+
+class PostListView(ListView):
+    model = Post
+    template_name ='home.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name='posts.html'

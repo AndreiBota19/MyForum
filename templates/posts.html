@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+    <div class="container-post">
+       
+            <article class="media content-section content-section-shadow">
+                <div class="media-body">
+                    <div class="post-metadata">
+                        <a href="" class="mr-2">{{ post.author }}</a>
+                        <small class="text-muted"> {{ post.date_posted|date:"N d, Y"}}</small>
+                    </div>
+                    <h2><a href="" class="post-title">{{ post.title }}</a></h2>
+                    <p class="post-content"> {{ post.content }}</p>
+                </div>
+            </article>        
+    </div>
+  
+{% endblock %}
