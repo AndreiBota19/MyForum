@@ -41,7 +41,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 8vh;
+  height: 75px;
   background-color: #252839;
 }
 
@@ -57,6 +57,7 @@ nav {
   justify-content: space-around;
   width: 35%;
   list-style: none;
+  padding-bottom: 10px;
 }
 .nav-link a {
   text-decoration: none;
@@ -73,6 +74,28 @@ nav {
   width: 25px;
   height: 3px;
   margin: 5px;
+}
+
+nav ul li a:hover {
+  color: rgb(197, 197, 197);
+}
+
+
+nav ul li a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #4ffaca;
+
+  position: relative;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
 }
 
 /* ----------------------- Mobile Navigation Bar ----------------------- */
@@ -101,7 +124,7 @@ nav {
 .content-section {
   background: #252839;
   padding: 10px 20px;
-  border: 1.5px solid #0c0a0a;
+  border: 1px solid #0c0a0a;
   border-radius: 2px;
   margin-bottom: 20px;
 }
