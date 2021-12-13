@@ -42,6 +42,10 @@ a:active {
   margin: 0 auto;
 }
 
+.text-muted {
+  color: rgb(151, 151, 151);
+}
+
 .content-section {
   background: #252839;
   padding: 10px 20px;

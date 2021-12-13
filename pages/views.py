@@ -3,32 +3,10 @@ from django.contrib.auth.forms import UserCreationForm
 from users.forms import CreateUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from posts.models import Post
 
 
 # Create your views here.
-
-
-posts = [
-    {
-        'author': 'Andrei Bota',
-        'title': 'First Post',
-        'content': 'This is the first post',
-        'date_posted': 'December 12, 2021'
-    },
-    {
-        'author': 'Andrei Bota',
-        'title': 'Second Post',
-        'content': 'This is the second post',
-        'date_posted': 'December 09, 2021'
-    },
-    {
-        'author': 'Andrei Bota',
-        'title': 'Third Post',
-        'content': 'This is the third post',
-        'date_posted': 'December 12, 2021'
-    }
-]
-
 
 def login_view(request, *args, **kwargs):
 
@@ -69,6 +47,6 @@ def logout_view(request, *args, **kwargs):
 
 def home_view(request, *args, **kwargs):
     context = {
-        'posts': posts,
+        'posts': Post.objects.all(),
     }
     return render(request, "home.html", context)
