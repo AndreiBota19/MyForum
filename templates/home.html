@@ -6,15 +6,9 @@
 
 {% block content %}
     <div class="container-post">
-        <!-- {% if messages %}
-            {% for message in messages %}
-                <div class="messages">
-                    {{message}}
-                </div>
-            {% endfor %}
-        {% endif %} -->
         {% for post in posts %}
             <article class="media content-section content-section-shadow">
+                <img class="post-img" src="{{post.author.profile.url}}" alt="">
                 <div class="media-body">
                     <div class="post-metadata">
                         <a href="" class="mr-2">{{ post.author }}</a>

@@ -46,7 +46,7 @@ nav {
 }
 
 .logo {
-  color: rgb(218, 216, 216);
+  color: #4ffaca;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 20px;
@@ -108,6 +108,19 @@ nav ul li a:hover::before {
   }
 }
 
+/* ----------------------- Profile Picture ----------------------- */
+
+.account-img {
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
 /* ----------------------- Posts ----------------------- */
 
 .container-post {
@@ -115,6 +128,13 @@ nav ul li a:hover::before {
   padding: 25px 0;
   margin: 0 auto;
 }
+
+.post-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
 
 .text-muted {
   color: rgb(151, 151, 151);
@@ -168,8 +188,7 @@ a.post-title:hover {
   align-items: center;
 }
 
-.center{
- 
+.center {
   text-align: center;
 }
 
