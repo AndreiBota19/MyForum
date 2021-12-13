@@ -7,6 +7,7 @@
     <meta name="viewport"  charset="utf-8" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
     <link rel="icon" href="{% static 'images/logo.png' %}">
+    
 
 
     {% if title %}
@@ -17,7 +18,30 @@
     
 </head>
 <body>
-    <nav class="nav-container"></nav>
+    <nav>
+        <div class="logo">
+            <h4>My Forum</h4>
+        </div>
+        <ul class="nav-link">
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Login</a>
+            </li>
+            <li>
+                <a href="">Register</a>
+            </li>
+            <li>
+                <a href="">Profile</a>
+            </li>
+        </ul>
+        <div class="resize">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 
     {% block content %} {% endblock %}
     

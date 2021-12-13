@@ -1,10 +1,11 @@
 /* ----------------------- Main ----------------------- */
-
+* {
+  box-sizing: border-box;
+}
 body {
   background: #181c28;
   color: white;
   font-family: sans-serif;
-  margin-top: 5rem;
 }
 
 .secondary-color {
@@ -32,6 +33,57 @@ a:focus,
 a:active {
   text-decoration: none !important;
   color: inherit;
+}
+
+/* ----------------------- Navigation Bar ----------------------- */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  background-color: #252839;
+}
+
+.logo {
+  color: rgb(218, 216, 216);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  list-style: none;
+}
+.nav-link a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.resize {
+  display: none;
+}
+.resize div {
+  background-color: #fff;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+}
+
+/* ----------------------- Mobile Navigation Bar ----------------------- */
+
+@media screen and (max-width: 1024px) {
+  .nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+  }
 }
 
 /* ----------------------- Posts ----------------------- */
