@@ -1,4 +1,5 @@
 {% load static %}
+{% load widget_tweaks %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@
             </li>
             {% if user.is_authenticated %}
             <li>
-                <a href="{% url 'post-create' %}">Create</a>
+                <a href="{% url 'post-create' %}">New Post</a>
             </li>
             <li>
                 <a href="{% url 'profile' %}">Profile</a>

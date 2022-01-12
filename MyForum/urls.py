@@ -19,7 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 
-from pages.views import signup_view, profile_view, PostListView, PostDetailView, PostCreateView
+from pages.views import signup_view, profile_view, PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
 urlpatterns = [
 
@@ -27,6 +27,9 @@ urlpatterns = [
 
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
+
+    path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
+    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
 
     path('/profile/', profile_view, name="profile"),
     path('signup/', signup_view, name='signup'),

@@ -17,6 +17,7 @@ void function signupFormFieldAddClass(){
     form_password2.placeholder='Confirm Password';
     form_password2.className += ' form-control';
 
+
 }();
 
 const navSlide = () => {

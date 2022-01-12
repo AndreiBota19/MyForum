@@ -8,9 +8,10 @@
     <div class="container-post">
         {% for post in posts %}
             <article class="media content-section content-section-shadow">
-                <!-- <img class="post-img" src="{{post.author.profile.url}}" alt=""> -->
+                
                 <div class="media-body">
                     <div class="post-metadata">
+                        <img class="post-img" src="{{post.author.profile.image.url}}" alt="">
                         <a href="" class="mr-2">{{ post.author }}</a>
                         <small class="text-muted"> {{ post.date_posted|date:"N d, Y"}}</small>
                     </div>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="login container">
+      
+    <div class="content-section">
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <h2>Are you sure you want to delete the post "{{ object.title }} "?</h1>
+         
+            
+            <div class="space-after"></div>
+
+            <button type="submit" class="button">Yes, Delete</button>
+            <a class="button2" href="{% url 'post-detail' object.id %}">Cancel</a>  
+        </form>
+    </div>
+</div>
+
+<script src="{% static 'scripts/scripts.js' %}"></script>
+
+{% endblock %}
+

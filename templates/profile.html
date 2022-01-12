@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load widget_tweaks %}
 
 
 {% block content %}
@@ -8,8 +9,11 @@
         <div class="media">
             <img src="{{ user.profile.image.url }}" alt="" class="account-img">
             <div class="">
+                <br>
                 <h2 class="account-heading">{{user.username}}</h2>
-                <p>{{user.email}}</p>
+                <br>
+                <h3>Email: {{user.email}}</h3>
+                <div class="post-metadata"></div>
             </div>
         </div>
  
@@ -17,22 +21,27 @@
 
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
+            <br>
              <h3>Username:</h3>
              <div>
-                {{u_form.username}} 
+                {{u_form.username|add_class:"form-control2 content-cut"}} 
              </div>
+           
              <h3>Email:</h3>
              <div>
-                {{u_form.email}}
+                {{u_form.email|add_class:"form-control2 content-cut"}}
             </div>
+            <div class="space-after"></div>
             <h3>Upload Profile Picture</h3>
+            <br>
             <div>
                 {{p_form.image}}
             </div>
+            <div class="space-after"></div>
              
             
             <div class="space-after"></div>
-            <div class="center">
+            <div class="center login">
                 <button type="submit" class="login-button">Save</button>  
             </div>
         </form>

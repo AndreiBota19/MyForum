@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load widget_tweaks %}
 
 {% block content %}
 <div class="login container">
       
     <div class="content-section">
         <div class="login-title">
-            <h1>Sign Up</h1>
+            <h1>Create Your Own Post</h1>
         </div>
 
         <form method="POST" action="">
             {% csrf_token %}
             <h3>Title:</h3>
+            <br>
            <div>
-               {{ form.title }}
+               {{ form.title|add_class:"form-control2 content-cut" }}
            </div>
            <div class="space-after"></div>
            <h3>Content</h3>
            <div>
-               {{ form.content }}
+               {{ form.content|add_class:"form-control3 content-cut" }}
            </div>
             
             <div class="space-after"></div>
